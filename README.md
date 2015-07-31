@@ -28,3 +28,10 @@ stooges.first(); //==> "Moe"
 var stooges = ["Moe", "Larry", "Curly"];
 stooges.last(); //==> "Curly"
 ```
+##String Methods
+[`String.format(`*args*`)`](https://github.com/KingShimkus/Plus.js/blob/master/src/string.js#L5) - inserts the arguments into the curly brackets of the string.
+
+```javascript
+var saying = "To {0} and {1}.";
+saying.format("infinity", "beyond"); //==> To infinity and beyond.
+```
