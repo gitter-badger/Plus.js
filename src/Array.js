@@ -1,3 +1,11 @@
+Array.prototype.append = function(){
+    var newarray = this;
+      for(var j = 0; j < arguments.length; j++){
+        newarray.push(arguments[j]);
+      }
+    return newarray;
+};
+
 Array.prototype.remove = function() {
     var what, a = arguments, L = a.length, ax;
     while (L && this.length) {
@@ -7,6 +15,14 @@ Array.prototype.remove = function() {
         }
     }
     return this;
+};
+
+Array.prototype.first = function(){
+    return this[0];
+};
+
+Array.prototype.last = function(){
+  return this[this.length - 1];
 };
 
 Array.prototype.sum = function() {
@@ -50,27 +66,4 @@ Array.prototype.has = function(value){
   return cake;
 };
 
-Array.prototype.each = function(){
-  this.each = true;
-  return this;
-};
 
-Array.prototype.append = function(){
-  if(this.each === true){
-    var newarrays = [];
-      for(var i = 0; i < this.length; i++){
-        newarrays.push(this[i] + arguments[0]);
-      }
-    return newarray;
-  } else {
-    var newarray = this;
-      for(var j = 0; j < arguments.length; j++){
-        newarray.push(arguments[j]);
-      }
-    return newarray;
-  }
-};
-
-Array.prototype.last = function(){
-  return this[this.length - 1];
-};
