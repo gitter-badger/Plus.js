@@ -1,35 +1,5 @@
 String.prototype.isEmpty = function() {
-  return this.length === 0;
-};
-
-String.prototype.nonEmpty = function() {
-  return this.length !== 0;
-};
-
-String.prototype.head = function() {
-  if (this.isEmpty()) {
-    throw "NoSuchElement";
-  }
-  return this.charAt(0);
-};
-
-String.prototype.takeRight = function(length) {
-  var start;
-  start = (this.length - length < 0 ? 0 : this.length - length);
-  return this.substring(start, this.length);
-};
-
-String.prototype.contains = function(str) {
-  return this.indexOf(str) !== -1;
-};
-
-
-String.prototype.startsWith = function(str) {
-  return this.take(str.length) === str;
-};
-
-String.prototype.endsWith = function(str) {
-  return this.takeRight(str.length) === str;
+    return (this.length === 0 || !this.trim());
 };
 
 String.prototype.format = function(arg) {
